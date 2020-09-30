@@ -1,22 +1,85 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, {useState} from 'react'
+import JSONData from '../../content/My-JSON-Content.json'
+import Fuse from 'fuse.js';
+import AllNotes from '../components/AllNotes/all-notes'
+import SearchNote from '../components/SearchNote/SearchNote'
+import NoteDetail from '../components/NoteDetail/NoteDetail'
+import Popup from '../components/popup/Popup'
+import './App.css';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+function JsonBuildTime(){
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+  const [notes, setNotes] = useState(JSONData);
+  const [query, setQuery] = useState('');
+  const [noteDetail, setNoteDetail] = useState('');
+  const [openPopup, setOpenPopup] = useState(false);
+
+  const fuse = new Fuse(notes, {
+    keys: [
+      'title'
+    ],
+    includeMatches: true
+  })
+
+  const results = fuse.search(query);
+  const characterResults = query ==='' ? notes : results.map(result => result.item);
+
+  function handleSearchClick(txtSearch){
+    setQuery(txtSearch);
+  }
+
+  function handleDeleteClick(note){
+    const index = notes.findIndex(x => x.id === note.id);
+    if(index < 0) return;
+    const newNotes = [...notes];
+    newNotes.splice(index, 1);
+    setNotes(newNotes)
+  }
+
+  function handleNoteClick(note){
+    setNoteDetail(note);
+  }
+
+  function handleAddClick(){
+    setOpenPopup(true);
+  }
+
+  function handleSaveClick(newNote){
+    const newNotes = [...notes];
+    newNotes.push(newNote);
+    setNotes(newNotes);
+  }
+
+  return(
+    <div className="App">
+      <div className="body">
+        <div className="left">
+          <SearchNote
+            searchOnClick={handleSearchClick}
+          />
+          <button className="button-add" onClick={handleAddClick}>Add Note</button>
+          <AllNotes
+            notes={characterResults} 
+            onNoteClick={handleNoteClick}
+            onDeleteClick={handleDeleteClick} 
+            set={setNotes}
+          />
+        </div>
+        <div className="right">
+          <NoteDetail 
+            note ={noteDetail}
+          />
+        </div>
+      </div>
+        <Popup 
+          openPopup={openPopup} 
+          setOpenPopup={setOpenPopup} 
+          notes={notes} 
+          note={''} 
+          isEditOrAdd={false}
+          onSaveClick={handleSaveClick}
+        />
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
-
-export default IndexPage
+  );
+}
+export default JsonBuildTime

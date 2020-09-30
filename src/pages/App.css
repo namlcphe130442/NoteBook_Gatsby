@@ -1,0 +1,25 @@
+.App{
+  margin: 50px auto;
+}
+
+.body{
+  display: flex;
+}
+
+.left{
+  width: 45%;
+}
+.right{
+  width: 45%;
+}
+
+.button-add{
+  margin-left: 150px;
+  margin-top: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  width: 120px ;
+  height: 35px ;
+  font-size: large;
+}

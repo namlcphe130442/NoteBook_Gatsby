@@ -1,0 +1,26 @@
+.searchText{
+    width: 120px;
+    border-style: solid;
+    height: 30px;
+}
+.buttonSearch{
+    background-color: blue;
+    color: white;
+    border: none;
+    width: 120px ;
+    height: 35px ;
+    font-size: large;
+}
+.search{
+width:100% ;
+display: flex;
+text-align: center;
+}
+.leftSearch{
+    padding-left: 120px;
+    width: 45%;
+}
+.rightSearch{
+    padding-right: 120px; 
+    width: 45%;
+}

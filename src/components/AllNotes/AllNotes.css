@@ -1,0 +1,18 @@
+.myNote {
+    font-family: sans-serif;
+    background-color: #34dbeb;
+    margin: 10px auto;
+    font-weight: 300;
+    color: black;
+    padding: 10px 5px;
+    border-bottom: 1px solid #bebebe;
+    display: flex;
+    width: 300px;
+    cursor: pointer;
+}
+.item{
+    width: 80%;
+}
+.img{
+    width: 20%;
+}

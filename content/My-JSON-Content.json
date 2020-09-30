@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1, 
+        "title": "To Kill a Mockingbird", 
+        "author":"Harper Lee", 
+        "date": "2018-07-22", 
+        "category": "Action and Adventure",
+        "description": "Published in 1960, this timeless classic explores human behaviour and the collective conscience of The Deep South in the early 20th century"},
+    {
+        "id": 2, 
+        "title": "Harry Potter", 
+        "author":"J.K. Rowling", 
+        "date": "2018-07-22", 
+        "category": "Classics", 
+        "description": "I’m willing to bet you’ve heard of Harry Potter, but have you read the books? Join Harry Potter as he begins his journey into the world of magic, where he is the celebrated Boy Who Lived. "},
+    {
+        "id": 3, 
+        "title": "The Philosopher’s Stone", 
+        "author":"J.K. Rowling", 
+        "date": "2013-01-12", 
+        "category": "Comic Book or Graphic Novel", 
+        "description": "I’m willing to bet you’ve heard of Harry Potter, but have you read the books? Join Harry Potter as he begins his journey into the world of magic, where he is the celebrated Boy Who Lived. "
+    },
+    {
+        "id": 4, 
+        "title": "The Lord of the Rings", 
+        "author":"J.R.R. Tolkien", 
+        "date": "2014-06-21", 
+        "category": "Fantasy", 
+        "description": "Middle Earth is a wonderful, expansive fantasy world filled with turmoil, heroes, evil and innocence. Although our protagonist Frodo Baggins’ quest seems impossible to complete, this trilogy is a tale of triumph in the most impossible circumstances."
+    },
+    {
+        "id": 5, 
+        "title": "The Great Gatsby", 
+        "author":"F. Scott Fitzgerald", 
+        "date": "2012-05-21", 
+        "category": "Historical Fiction", 
+        "description": "Published in 1925, Fitzgerald’s The Great Gatsby explores the decadence of the Jazz Age, and one man’s introduction into a world where even those with the most indulgent lives cannot earn love."
+    },
+    {
+        "id": 6, 
+        "title": "Pride and Prejudice", 
+        "author":"Jane Austen", 
+        "date": "2011-03-24", 
+        "category": "Horror", 
+        "description": "One of the most famous novels of all time, Pride And Prejudice details the courtship of two opposed characters in a world where manners and courtesy are of the utmost importance"
+    }
+]
