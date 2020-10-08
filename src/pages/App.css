@@ -8,14 +8,20 @@
 
 .left{
   width: 45%;
+  margin-right: 50px;
 }
 .right{
   width: 45%;
 }
 
 .button-add{
-  margin-left: 150px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.button-add > button{
   margin-top: 10px;
+  margin-bottom: 10px;
   background-color: blue;
   color: white;
   border: none;

@@ -42,7 +42,7 @@ function AllNotes(props) {
   }
 
   return (
-    <>
+    <div className="allNote">
         {notes.map( note => (
             <div className="myNote" key={note.id}>
                 <div className="item" onClick={() => handleClick(note)}>
@@ -62,7 +62,7 @@ function AllNotes(props) {
             isEditOrAdd = {true}
             onSaveClick={handleSaveClick}
         />
-    </>
+    </div>
   );
 }
 

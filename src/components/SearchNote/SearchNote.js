@@ -17,10 +17,10 @@ function SearchNote(props) {
 
     return(
         <div className="search">
-            <div className="leftSearch">
+            <div>
                 <input className="searchText" type="text" onChange={handleSearchChange}/>
             </div>
-            <div className="rightSearch">
+            <div>
                 <button className="buttonSearch" onClick={handleSearchClick}>Search</button>
             </div>
         </div>

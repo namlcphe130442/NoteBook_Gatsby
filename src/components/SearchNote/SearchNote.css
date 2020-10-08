@@ -1,5 +1,10 @@
+.search{
+    display: flex;
+    padding-left: 15%;
+    padding-right: 15%;
+}
 .searchText{
-    width: 120px;
+    margin-right: 20px;
     border-style: solid;
     height: 30px;
 }
@@ -7,20 +12,6 @@
     background-color: blue;
     color: white;
     border: none;
-    width: 120px ;
     height: 35px ;
     font-size: large;
-}
-.search{
-width:100% ;
-display: flex;
-text-align: center;
-}
-.leftSearch{
-    padding-left: 120px;
-    width: 45%;
-}
-.rightSearch{
-    padding-right: 120px; 
-    width: 45%;
 }

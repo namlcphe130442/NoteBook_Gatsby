@@ -67,7 +67,9 @@ function JsonBuildTime(){
           <SearchNote
             searchOnClick={handleSearchClick}
           />
-          <button className="button-add" onClick={handleAddClick}>Add Note</button>
+          <div className="button-add">
+            <button onClick={handleAddClick}>Add Note</button>
+          </div>
           <AllNotes
             notes={characterResults} 
             onNoteClick={handleNoteClick}
