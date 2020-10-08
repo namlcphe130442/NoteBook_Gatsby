@@ -38,9 +38,6 @@ function JsonBuildTime(){
       setNoteDetail('');
     }
   }
-  function handleEditClick(note){
-    console.log(note);
-  }
 
   function handleSaveNoteClick(newNotes, noteNew){
     setNotes(newNotes);
@@ -75,7 +72,6 @@ function JsonBuildTime(){
             notes={characterResults} 
             onNoteClick={handleNoteClick}
             onDeleteClick={handleDeleteClick} 
-            onEditClick={handleEditClick}
             onSaveCLick={handleSaveNoteClick}
           />
         </div>
