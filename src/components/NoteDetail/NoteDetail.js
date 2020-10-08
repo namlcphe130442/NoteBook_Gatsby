@@ -6,9 +6,8 @@ function NoteDetail(props) {
     if(note !== ''){
         return (
             <div>
-                <h2>{note.title}</h2>
+                <h2>{note.title} - {note.author}</h2>
                 <p>Category: {note.category} - Date: {note.date}</p>
-                <span>Author: {note.author}</span>
                 <span>{note.description}</span>
             </div>
         );
