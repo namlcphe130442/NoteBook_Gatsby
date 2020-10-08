@@ -6,7 +6,7 @@ import Popup from '../popup/Popup';
 
 function AllNotes(props) {
   
-  const {notes, onNoteClick, onDeleteClick, set} = props;
+  const {notes, onNoteClick, onDeleteClick, onSaveCLick} = props;
   const [openPopup, setOpenPopup] = useState(false);
   const [noteChoice, setNoteChoice] = useState('');
 
@@ -25,7 +25,7 @@ function AllNotes(props) {
   }
 
   function handleSaveClick(noteNew, index){
-      set(
+      const newNotes =
         [
           ...notes.slice(0, index),
          {
@@ -38,7 +38,7 @@ function AllNotes(props) {
          },
           ...notes.slice(index + 1)
         ]
-      );
+        onSaveCLick(newNotes, noteNew);
   }
 
   return (

@@ -33,7 +33,20 @@ function JsonBuildTime(){
     if(index < 0) return;
     const newNotes = [...notes];
     newNotes.splice(index, 1);
-    setNotes(newNotes)
+    setNotes(newNotes);
+    if(note.id === noteDetail.id){
+      setNoteDetail('');
+    }
+  }
+  function handleEditClick(note){
+    console.log(note);
+  }
+
+  function handleSaveNoteClick(newNotes, noteNew){
+    setNotes(newNotes);
+    if(noteNew.id === noteDetail.id){
+      setNoteDetail(noteNew);
+    }
   }
 
   function handleNoteClick(note){
@@ -62,7 +75,8 @@ function JsonBuildTime(){
             notes={characterResults} 
             onNoteClick={handleNoteClick}
             onDeleteClick={handleDeleteClick} 
-            set={setNotes}
+            onEditClick={handleEditClick}
+            onSaveCLick={handleSaveNoteClick}
           />
         </div>
         <div className="right">
