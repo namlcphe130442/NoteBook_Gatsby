@@ -8,6 +8,7 @@ function NoteDetail(props) {
             <div>
                 <h2>{note.title}</h2>
                 <p>Category: {note.category} - Date: {note.date}</p>
+                <span>Author: {note.author}</span>
                 <span>{note.description}</span>
             </div>
         );
